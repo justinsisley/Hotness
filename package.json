@@ -15,7 +15,7 @@
   },
   "author": "Justin Sisley <manmademammal@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/justinsisley/Hotness/",
+  "homepage": "https://github.com/justinsisley/Hotness",
   "dependencies": {
     "flux": "^2.1.1",
     "history": "^1.12.5",
