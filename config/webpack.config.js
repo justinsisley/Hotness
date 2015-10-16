@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
+const devServerPort = 8743;
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:8743',
+    `webpack-dev-server/client?http://localhost:${devServerPort}`,
     'webpack/hot/only-dev-server',
     './client/main',
   ],
@@ -51,4 +52,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
+  port: devServerPort,
 };

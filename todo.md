@@ -1,0 +1,8 @@
+- use express to handle everything and proxy static request to the webpack dev server
+  - https://github.com/nodejitsu/node-http-proxy#options
+  - https://webpack.github.io/docs/webpack-dev-server.html
+  - http://stackoverflow.com/questions/26203725/how-to-allow-for-webpack-dev-server-to-allow-entry-points-from-react-router
+- server security
+ - https://blog.risingstack.com/node-js-security-checklist/
+- user store with placeholder data
+- https://github.com/pocotan001/react-styleguide-generator

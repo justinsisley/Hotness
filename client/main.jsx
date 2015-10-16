@@ -4,7 +4,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 import containers from './components/containers';
 import layouts from './components/layouts';
 import pages from './components/pages';
-import history from './history';
+import history from './helpers/history';
 
 ReactDOM.render((
   <Router history={history}>

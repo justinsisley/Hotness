@@ -1,5 +1,5 @@
-import loginStore from './login';
-import userStore from './user';
+import loginStore from './login/login';
+import userStore from './user/user';
 
 export default {
   loginStore,

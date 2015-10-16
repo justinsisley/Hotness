@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x ./bin/selenium/chromedriver
+
 node server/entry.js &
 TASKA_PID=$! &&
 sleep 5 &&
