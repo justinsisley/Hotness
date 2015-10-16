@@ -1,8 +1,8 @@
 import test from 'tape';
-import React from 'react/addons';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 import Nav from '../Nav.jsx';
 
-const TestUtils = React.addons.TestUtils;
 const shallowRenderer = TestUtils.createRenderer();
 
 test('Nav', assert => {
@@ -25,13 +25,13 @@ test('Nav', assert => {
   );
 
   assert.equal(
-    component._store.props.children.length,
+    component.props.children.length,
     navItems.length,
     'Renders a list of nav items as links'
   );
 
   const navItem1 = navItems[0];
-  const navItem1Rendered = component._store.props.children[0].props.children._store.props;
+  const navItem1Rendered = component.props.children[0].props.children.props;
 
   assert.equal(
     navItem1.title,

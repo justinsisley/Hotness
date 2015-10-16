@@ -1,8 +1,8 @@
 import test from 'tape';
-import React from 'react/addons';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 import Input from '../Input.jsx';
 
-const TestUtils = React.addons.TestUtils;
 const shallowRenderer = TestUtils.createRenderer();
 
 test('Input', assert => {
@@ -21,7 +21,7 @@ test('Input', assert => {
   );
 
   assert.equal(
-    component._store.props.placeholder,
+    component.props.placeholder,
     placeholderText,
     'Accepts standard `input` element attributes as properties'
   );

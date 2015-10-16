@@ -1,8 +1,8 @@
 import test from 'tape';
-import React from 'react/addons';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
 import Button from '../Button.jsx';
 
-const TestUtils = React.addons.TestUtils;
 const shallowRenderer = TestUtils.createRenderer();
 
 test('Button', assert => {
@@ -25,13 +25,13 @@ test('Button', assert => {
   );
 
   assert.equal(
-    component._store.props.children,
+    component.props.children,
     buttonText,
     'Renders button text'
   );
 
   assert.equal(
-    component._store.props.name,
+    component.props.name,
     buttonName,
     'Accepts standard `button` element attributes as properties'
   );
