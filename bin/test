@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tape-babel-css-modules '**/__tests__/unit.js' | tap-spec

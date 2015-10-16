@@ -1,0 +1,12 @@
+@import '../../../constants/colors.css';
+
+.button {
+  padding: 7px 10px;
+  margin: 0 5px 0 0;
+  font-family: Lato;
+  font-size: 14px;
+  color: $white;
+  background: $mineShaft;
+  border: none;
+  border-radius: 3px;
+}
