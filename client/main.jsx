@@ -4,10 +4,10 @@ import {Router, Route, IndexRoute} from 'react-router';
 import containers from './components/containers';
 import layouts from './components/layouts';
 import pages from './components/pages';
-import history from './helpers/history';
+import helpers from './helpers';
 
 ReactDOM.render((
-  <Router history={history}>
+  <Router history={helpers.history}>
     <Route component={containers.App}>
       {/* Public layout */}
       <Route path="/" component={layouts.Public}>
@@ -15,25 +15,19 @@ ReactDOM.render((
         <Route path="about" component={pages.About} />
 
         {/* Some paths shouldn't be viewed if the user is logged in */}
-        <Route component={containers.RequireNoAuth}>
-          <Route path="login" component={pages.Login} />
-          <Route path="signup" component={pages.Signup} />
-        </Route>
+        <Route path="login" component={pages.Login} onEnter={helpers.auth.requireNoAuth} />
+        <Route path="signup" component={pages.Signup} onEnter={helpers.auth.requireNoAuth} />
 
         {/* Styleguide requires authentication */}
-        <Route component={containers.RequireAuth}>
-          <Route path="styleguide" component={pages.Styleguide} />
-        </Route>
+        <Route path="styleguide" component={pages.Styleguide} onEnter={helpers.auth.requireAuth} />
       </Route>
 
       {/* App layout */}
-      <Route component={layouts.App}>
-        {/* App paths require authentication */}
-        <Route component={containers.RequireAuth}>
-          <Route path="dashboard" component={pages.Dashboard} />
-          <Route path="users" component={pages.Users} />
-          <Route path="users/:userId" component={pages.User} />
-        </Route>
+      {/* All app paths require authentication */}
+      <Route component={layouts.App} onEnter={helpers.auth.requireAuth}>
+        <Route path="dashboard" component={pages.Dashboard} />
+        <Route path="users" component={pages.Users} />
+        <Route path="users/:userId" component={pages.User} />
       </Route>
 
       {/* Logout is routed to a container that logs the user out */}

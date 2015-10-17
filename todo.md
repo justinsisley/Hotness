@@ -1,8 +1,7 @@
-- look into `onEnter` for `RequireAuth`
-- https://github.com/pocotan001/react-styleguide-generator
 - production mode
   - build all assets and dump into directory on disk
   - use express to cache assets and serve them as static
   - generate hashed name for cache busting
-  - https://github.com/rackt/react-router/issues/2212
 - fix home active state
+  - https://github.com/rackt/react-router/issues/2212
+- helper tests
