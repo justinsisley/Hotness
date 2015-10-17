@@ -2,6 +2,18 @@ import test from 'tape';
 import userActions from '../../../actions/user'
 import userStore from '../user';
 
+let originalGetUsers = userStore._getUsers;
+function mockGetUsers() {
+  userStore._getUsers = function() {
+    // TODO: user fixture data
+    userStore._users = [{}, {}, {}, {}, {}];
+    userStore.emitChange();
+  };
+}
+function restoreGetUsers() {
+  userStore._getUsers = originalGetUsers;
+}
+
 test('userStore#init', assert => {
   assert.plan(2);
 
@@ -19,6 +31,8 @@ test('userStore#init', assert => {
 });
 
 test('userStore#getUsers', assert => {
+  mockGetUsers();
+
   assert.plan(2);
 
   userStore.addChangeListener(() => {
@@ -37,3 +51,5 @@ test('userStore#getUsers', assert => {
 
   userActions.getUsers();
 });
+
+test('userStore#getUser')

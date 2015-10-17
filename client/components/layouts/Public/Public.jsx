@@ -1,28 +1,26 @@
 import React from 'react';
 import modules from '../../modules';
+import stores from '../../../stores';
 
 const Public = React.createClass({
   propTypes: {
     children: React.PropTypes.any,
   },
 
-  componentWillMount() {
-    console.log('Showing the public layout...');
+  getInitialState() {
+    return {
+      items: stores.navStore.publicNavItems
+    }
   },
 
-  _getNavItems() {
-    return [
-      {title: 'Home', path: '/'},
-      {title: 'About', path: '/about'},
-      {title: 'Signup', path: '/signup'},
-      {title: 'Login', path: '/login'},
-    ];
+  componentDidMount() {
+    console.log('Showing the public layout...');
   },
 
   render() {
     return (
       <div>
-        <modules.Nav items={this._getNavItems()} />
+        <modules.Nav items={this.state.items} />
 
         {this.props.children}
       </div>

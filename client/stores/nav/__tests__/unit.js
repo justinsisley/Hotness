@@ -1,39 +1,18 @@
 import test from 'tape';
-import navActions from '../../../actions/user'
-import navStore from '../user';
+import navStore from '../nav';
 
-test('navStore#init', assert => {
+test('navStore', assert => {
   assert.plan(2);
 
   assert.equal(
-    navStore.users instanceof Array,
+    navStore.publicNavItems instanceof Array,
     true,
-    'Has a `users` getter that returns an array'
+    'Has a `publicNavItems` getter that returns an array of nav items'
   );
 
   assert.equal(
-    navStore.users.length,
-    0,
-    'Initializes with an empty "users" array'
+    navStore.appNavItems instanceof Array,
+    true,
+    'Has a `publicNavItems` getter that returns an array of nav items'
   );
-});
-
-test('navStore#getUsers', assert => {
-  assert.plan(2);
-
-  navStore.addChangeListener(() => {
-    assert.equal(
-      navStore.users instanceof Array,
-      true,
-      'Updates the "users" array'
-    );
-
-    assert.equal(
-      navStore.users.length,
-      5,
-      'The "users" array contains a list of users'
-    );
-  });
-
-  navActions.getUsers();
 });

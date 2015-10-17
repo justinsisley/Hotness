@@ -1,112 +1,47 @@
-// getLoggedInNavItems
-// getLoggedOutNavItems
-
-
-import {EventEmitter} from 'events';
-import fetch from 'isomorphic-fetch';
-import actions from '../../constants/actions';
-import appDispatcher from '../../dispatchers/app';
-
-const CHANGE_EVENT = 'change';
-
 /**
- * UserStore contains a list of all other users.
- * As with all stores, it is intended to be used as a singleton, and the
- * module itself returns an instance of the store.
+ * NavStore contains a list of nav items for both the logged-out and
+ * logged-in layouts.
+ * It's not a normal store in the sense that it's never manipulate. It just
+ * holds some static data and provides a couple of getters.
  */
-class UserStore extends EventEmitter {
+class NavStore {
   /**
    * Calls `super()` to extend `EventEmitter`, configures initial state,
    * and registers a callback with the app dispatcher.
    */
   constructor() {
-    super();
+    this._publicNavItems = [
+      {title: 'Home', path: '/'},
+      {title: 'About', path: '/about'},
+      {title: 'Signup', path: '/signup'},
+      {title: 'Login', path: '/login'},
+    ];
 
-    this._users = [];
-    this._user = [];
-
-    appDispatcher.register(payload => {
-      const action = payload.action;
-
-      switch (action.actionType) {
-      case actions.GET_USERS:
-        this._getUsers();
-        break;
-
-      case actions.GET_USER:
-        this._getUser(action.userId);
-        break;
-
-      default:
-        // no-op
-      }
-    });
+    this._appNavItems = [
+      {title: 'Home', path: '/'},
+      {title: 'About', path: '/about'},
+      {title: 'Dashboard', path: '/dashboard'},
+      {title: 'Users', path: '/users'},
+      {title: 'Styleguide', path: '/styleguide'},
+      {title: 'Logout', path: '/logout'},
+    ];
   }
 
   /**
-   * Emit a change using `EventEmitter`
+   * Provide the public nav items
+   * @return {array} An array of nav items.
    */
-  emitChange() {
-    this.emit(CHANGE_EVENT);
+  get publicNavItems() {
+    return this._publicNavItems;
   }
 
   /**
-   * Listen for a change event on this store.
-   * @param {Function} callback Function to call when a change event occurs.
+   * Provide the app nav items
+   * @return {array} An array of nav items.
    */
-  addChangeListener(callback) {
-    this.on(CHANGE_EVENT, callback);
-  }
-
-  /**
-   * Stop listening for a change event on this store.
-   * @param  {Function} callback Function to call when a change event occurs.
-   */
-  removeChangeListener(callback) {
-    this.removeListener(CHANGE_EVENT, callback);
-  }
-
-  /**
-   * Logic used to get the list of users and update the store's state.
-   */
-  _getUsers() {
-    fetch('/api/users')
-    .then(response => response.json())
-    .then(users => {
-      this._users = users;
-
-      this.emitChange();
-    });
-  }
-
-  /**
-   * Logic used to get a single user's data and update the store's state.
-   */
-  _getUser(userId) {
-    fetch(`/api/users/${userId}`)
-    .then(response => response.json())
-    .then(user => {
-      this._user = user;
-
-      this.emitChange();
-    });
-  }
-
-  /**
-   * Provide the users list data.
-   * @return {array} An array of users.
-   */
-  get users() {
-    return this._users;
-  }
-
-  /**
-   * Provide the user detail data.
-   * @return {object} A user object.
-   */
-  get user() {
-    return this._user;
+  get appNavItems() {
+    return this._appNavItems;
   }
 }
 
-export default new UserStore();
+export default new NavStore();

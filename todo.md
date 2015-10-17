@@ -1,4 +1,3 @@
-- nav item store
 - look into `onEnter` for `RequireAuth`
 - https://github.com/pocotan001/react-styleguide-generator
 - webpack config comments
