@@ -1,5 +1,5 @@
-import history from './history';
-import auth from './auth';
+import history from './history/history';
+import auth from './auth/auth';
 
 export default {
   history,

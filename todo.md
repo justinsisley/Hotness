@@ -4,4 +4,3 @@
   - generate hashed name for cache busting
 - fix home active state
   - https://github.com/rackt/react-router/issues/2212
-- helper tests

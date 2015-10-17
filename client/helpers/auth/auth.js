@@ -1,4 +1,4 @@
-import {loginStore} from '../stores';
+import {loginStore} from '../../stores';
 
 const authHelper = {
   requireAuth(nextState, replaceState) {
