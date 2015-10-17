@@ -1,6 +1,6 @@
 import React from 'react';
 import {History} from 'react-router';
-import loginStore from '../../../stores/login';
+import {loginStore} from '../../../stores';
 
 const RequireAuth = React.createClass({
   propTypes: {

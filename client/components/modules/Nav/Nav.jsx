@@ -11,6 +11,7 @@ const Nav = React.createClass({
     const {path, title} = navItem;
 
     if (path === '/') {
+      // FIXME: not working
       return (
         <IndexLink
           to={path}

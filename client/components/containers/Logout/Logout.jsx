@@ -1,7 +1,7 @@
 import React from 'react';
 import {History} from 'react-router';
 import loginAction from '../../../actions/login';
-import loginStore from '../../../stores/login';
+import {loginStore} from '../../../stores';
 
 const Logout = React.createClass({
   propTypes: {

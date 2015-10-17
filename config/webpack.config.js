@@ -1,18 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-const devServerPort = 8743;
+const webpackDevServerPort = 8744;
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    `webpack-dev-server/client?http://localhost:${devServerPort}`,
+    `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
     'webpack/hot/only-dev-server',
     './client/main',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '/static/',
+    publicPath: `http://localhost:${webpackDevServerPort}/static/`,
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -52,5 +52,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
-  port: devServerPort,
+  webpackDevServerPort: webpackDevServerPort,
 };

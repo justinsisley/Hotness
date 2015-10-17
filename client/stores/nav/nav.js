@@ -1,3 +1,7 @@
+// getLoggedInNavItems
+// getLoggedOutNavItems
+
+
 import {EventEmitter} from 'events';
 import fetch from 'isomorphic-fetch';
 import actions from '../../constants/actions';

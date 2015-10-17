@@ -17,12 +17,17 @@
   "license": "MIT",
   "homepage": "https://github.com/justinsisley/Hotness",
   "dependencies": {
+    "express": "^4.13.3",
     "flux": "^2.1.1",
+    "helmet": "^0.12.0",
     "history": "^1.12.5",
+    "isomorphic-fetch": "^2.1.1",
+    "proxy-middleware": "^0.14.0",
     "react": "^0.14.0",
     "react-assign": "^0.1.2",
     "react-dom": "^0.14.0",
-    "react-router": "^1.0.0-rc3"
+    "react-router": "^1.0.0-rc3",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "babel": "^5.8.23",

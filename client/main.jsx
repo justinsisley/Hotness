@@ -31,9 +31,8 @@ ReactDOM.render((
         {/* App paths require authentication */}
         <Route component={containers.RequireAuth}>
           <Route path="dashboard" component={pages.Dashboard} />
-          <Route path="users" component={pages.Users}>
-            <Route path="/user/:userId" component={pages.User} />
-          </Route>
+          <Route path="users" component={pages.Users} />
+          <Route path="users/:userId" component={pages.User} />
         </Route>
       </Route>
 

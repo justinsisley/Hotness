@@ -35,7 +35,7 @@ const Users = React.createClass({
           {this.state.users.map(user => {
             return (
               <li key={user.id}>
-                <Link to={`/users/user/${user.id}`}>{user.name}</Link>
+                <Link to={`/users/${user.id}`}>{user.username}</Link>
               </li>
             );
           })}
