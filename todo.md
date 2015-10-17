@@ -1,6 +1,5 @@
 - look into `onEnter` for `RequireAuth`
 - https://github.com/pocotan001/react-styleguide-generator
-- webpack config comments
 - production mode
   - build all assets and dump into directory on disk
   - use express to cache assets and serve them as static
