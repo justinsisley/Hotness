@@ -38,6 +38,8 @@ To run the application in production mode:
 npm run production
 ```
 
+View the production application at [http://localhost:8743](http://localhost:8743).
+
 ## Generate documentation
 
 ```

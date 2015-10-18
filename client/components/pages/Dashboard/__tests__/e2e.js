@@ -3,8 +3,8 @@ module.exports = {
     browser
     .url('http://localhost:8743/login')
     .waitForElementVisible('body', 1000)
-    .setValue('input[type=email]', 'user')
-    .setValue('input[type=password]', 'password')
+    .setValue('input[type=email]', 'testuser')
+    .setValue('input[type=password]', 'testpassword')
     .waitForElementVisible('button', 1000)
     .click('button')
     .pause(1000)

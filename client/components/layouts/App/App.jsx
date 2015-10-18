@@ -1,6 +1,7 @@
 import React from 'react';
 import modules from '../../modules';
 import stores from '../../../stores';
+import styles from './App.css';
 
 const App = React.createClass({
   propTypes: {

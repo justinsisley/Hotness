@@ -1,2 +1,0 @@
-- fix home active state
-  - https://github.com/rackt/react-router/issues/2212

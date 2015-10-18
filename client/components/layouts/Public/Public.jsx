@@ -1,6 +1,7 @@
 import React from 'react';
 import modules from '../../modules';
 import stores from '../../../stores';
+import styles from './Public.css';
 
 const Public = React.createClass({
   propTypes: {
