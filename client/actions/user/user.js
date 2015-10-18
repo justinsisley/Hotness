@@ -1,5 +1,5 @@
-import actions from '../constants/actions';
-import appDispatcher from '../dispatchers/app.js';
+import actions from '../../constants/actions';
+import appDispatcher from '../../dispatchers/app.js';
 
 const userActions = {
   getUsers() {

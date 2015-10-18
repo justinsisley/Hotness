@@ -1,5 +1,5 @@
 import test from 'tape';
-import userActions from '../../../actions/user'
+import {userAction} from '../../../actions';
 import userStore from '../user';
 
 let originalGetUsers = userStore._getUsers;
@@ -49,7 +49,7 @@ test('userStore#getUsers', assert => {
     );
   });
 
-  userActions.getUsers();
+  userAction.getUsers();
 });
 
 test('userStore#getUser')

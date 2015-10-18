@@ -1,5 +1,5 @@
-import loginAction from './login';
-import userAction from './user';
+import loginAction from './login/login';
+import userAction from './user/user';
 
 export default {
   loginAction,

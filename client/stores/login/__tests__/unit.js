@@ -1,5 +1,5 @@
 import test from 'tape';
-import loginActions from '../../../actions/login'
+import {loginAction} from '../../../actions';
 import loginStore from '../login';
 
 // Basic setup/tear-down performed before certain tests
@@ -55,9 +55,9 @@ test('loginStore#badCredentials', assert => {
     );
   });
 
-  loginActions.logIn();
-  loginActions.logIn(undefined);
-  loginActions.logIn(undefined, undefined);
+  loginAction.logIn();
+  loginAction.logIn(undefined);
+  loginAction.logIn(undefined, undefined);
 });
 
 test('loginStore#loginSuccess', assert => {
@@ -85,7 +85,7 @@ test('loginStore#loginSuccess', assert => {
     );
   });
 
-  loginActions.logIn('testuser', 'testpassword');
+  loginAction.logIn('testuser', 'testpassword');
 });
 
 test('loginStore#logout', assert => {
@@ -114,5 +114,5 @@ test('loginStore#logout', assert => {
     );
   });
 
-  loginActions.logOut();
+  loginAction.logOut();
 });

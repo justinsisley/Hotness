@@ -1,4 +1,4 @@
-import loginAction from '../../actions/login';
+import {loginAction} from '../../actions';
 import {loginStore} from '../../stores';
 
 const authHelper = {
