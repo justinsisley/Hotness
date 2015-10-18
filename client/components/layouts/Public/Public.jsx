@@ -13,10 +13,6 @@ const Public = React.createClass({
     }
   },
 
-  componentDidMount() {
-    console.log('Showing the public layout...');
-  },
-
   render() {
     return (
       <div>

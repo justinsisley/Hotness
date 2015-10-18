@@ -1,0 +1,4 @@
+#!/bin/bash
+
+webpack --display-error-details --config ./config/webpack.config.prd.js
+NODE_ENV=production node server/entry.js

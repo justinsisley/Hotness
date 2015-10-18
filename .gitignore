@@ -11,7 +11,5 @@ tmp
 ehthumbs.db
 Thumbs.db
 node_modules
-dist
-build
+static
 esdoc
-tests_output

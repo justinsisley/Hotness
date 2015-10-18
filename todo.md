@@ -1,6 +1,2 @@
-- production mode
-  - build all assets and dump into directory on disk
-  - use express to cache assets and serve them as static
-  - generate hashed name for cache busting
 - fix home active state
   - https://github.com/rackt/react-router/issues/2212

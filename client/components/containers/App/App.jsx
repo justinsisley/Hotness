@@ -6,10 +6,6 @@ const RequireAuth = React.createClass({
     children: React.PropTypes.any,
   },
 
-  componentWillMount() {
-    console.log('Bootstrapping the app...');
-  },
-
   render() {
     return (
       <div>

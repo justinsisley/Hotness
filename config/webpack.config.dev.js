@@ -17,7 +17,8 @@ module.exports = {
   output: {
     // The output directory
     path: path.join(__dirname, 'dist'),
-    // The filename of the entry chunk as relative path inside the output.path directory
+    // The filename of the entry chunk as relative path inside the
+    // output.path directory
     filename: 'main.js',
     // The output.path from the view of the Javascript / HTML page
     publicPath: `http://localhost:${webpackDevServerPort}/static/`,
@@ -63,7 +64,9 @@ module.exports = {
 
   // Additional plugins for the compiler
   plugins: [
-    // Assign the module and chunk ids by occurrence count. Ids that are used often get lower (shorter) ids. This make ids predictable, reduces to total file size and is recommended.
+    // Assign the module and chunk ids by occurrence count. Ids that are used
+    // often get lower (shorter) ids. This make ids predictable, reduces to
+    // total file size and is recommended.
     new webpack.optimize.OccurenceOrderPlugin(),
     // Enables Hot Module Replacement
     new webpack.HotModuleReplacementPlugin(),

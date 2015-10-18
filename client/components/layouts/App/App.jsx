@@ -13,10 +13,6 @@ const App = React.createClass({
     }
   },
 
-  componentDidMount() {
-    console.log('Showing the app layout...');
-  },
-
   render() {
     return (
       <div>
