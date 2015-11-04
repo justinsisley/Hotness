@@ -1,6 +1,6 @@
 {
   "name": "hotness",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A starter project using React, Flux, CSS modules, PostCSS, webpack, and hot module reloading",
   "scripts": {
     "start": "node server/entry.js",
