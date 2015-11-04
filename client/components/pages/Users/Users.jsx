@@ -13,7 +13,7 @@ const Users = React.createClass({
   componentDidMount() {
     stores.userStore.addChangeListener(this._userStoreChange);
 
-    actions.userAction.getUsers();
+    actions.userActions.getUsers();
   },
 
   componentWillUnmount() {

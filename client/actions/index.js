@@ -1,7 +1,7 @@
-import loginAction from './login/login';
-import userAction from './user/user';
+import loginActions from './login/login';
+import userActions from './user/user';
 
 export default {
-  loginAction,
-  userAction,
+  loginActions,
+  userActions,
 };

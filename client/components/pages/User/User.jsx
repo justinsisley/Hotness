@@ -19,7 +19,7 @@ const User = React.createClass({
   componentDidMount() {
     stores.userStore.addChangeListener(this._userStoreChange);
 
-    actions.userAction.getUser(this.props.params.userId);
+    actions.userActions.getUser(this.props.params.userId);
   },
 
   componentWillUnmount() {

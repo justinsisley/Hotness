@@ -28,7 +28,7 @@ const Login = React.createClass({
   _onSubmit() {
     const {username, password} = this.state;
 
-    actions.loginAction.logIn(username, password);
+    actions.loginActions.logIn(username, password);
   },
 
   _loginStoreChange() {

@@ -1,22 +1,22 @@
-import {loginAction} from '../../actions';
-import {loginStore} from '../../stores';
+import actions from '../../actions';
+import stores from '../../stores';
 
 const authHelper = {
   requireAuth(nextState, replaceState) {
-    if (!loginStore.loginState.loggedIn) {
+    if (!stores.loginStore.loginState.loggedIn) {
       replaceState(null, '/login');
     }
   },
 
   requireNoAuth(nextState, replaceState) {
-    if (loginStore.loginState.loggedIn) {
+    if (stores.loginStore.loginState.loggedIn) {
       replaceState(null, '/dashboard');
     }
   },
 
   logOut(nextState, replaceState, callback) {
-    loginStore.addChangeListener(() => {
-      if (loginStore.loginState.loggedIn) {
+    stores.loginStore.addChangeListener(() => {
+      if (stores.loginStore.loginState.loggedIn) {
         replaceState(null, '/dashboard');
       } else {
         replaceState(null, '/login');
@@ -25,7 +25,7 @@ const authHelper = {
       callback();
     });
 
-    loginAction.logOut();
+    actions.loginActions.logOut();
   }
 };
 

@@ -78,7 +78,7 @@ class LoginStore extends EventEmitter {
   logIn(credentials) {
     const {username, password} = credentials;
 
-    if (username === 'testuser' && password === 'testpassword') {
+    if (username === 'test@test.com' && password === 'test') {
       this._loggedIn = true;
       this._error = '';
       this._user.username = username;
