@@ -15,9 +15,6 @@ ReactDOM.render((
       {/* Some paths shouldn't be viewed if the user is logged in */}
       <Route path="login" component={pages.Login} onEnter={helpers.auth.requireNoAuth} />
       <Route path="signup" component={pages.Signup} onEnter={helpers.auth.requireNoAuth} />
-
-      {/* Styleguide requires authentication */}
-      <Route path="styleguide" component={pages.Styleguide} onEnter={helpers.auth.requireAuth} />
     </Route>
 
     {/* App layout */}

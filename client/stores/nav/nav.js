@@ -22,7 +22,6 @@ class NavStore {
       {title: 'About', path: '/about'},
       {title: 'Dashboard', path: '/dashboard'},
       {title: 'Users', path: '/users'},
-      {title: 'Styleguide', path: '/styleguide'},
       {title: 'Logout', path: '/logout'},
     ];
   }

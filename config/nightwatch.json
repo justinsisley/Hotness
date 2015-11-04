@@ -6,7 +6,6 @@
     "./client/components/pages/Home/__tests__/",
     "./client/components/pages/Login/__tests__/",
     "./client/components/pages/Signup/__tests__/",
-    "./client/components/pages/Styleguide/__tests__/",
     "./client/components/pages/User/__tests__/",
     "./client/components/pages/Users/__tests__/"
   ],
