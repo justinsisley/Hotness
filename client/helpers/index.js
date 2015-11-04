@@ -3,5 +3,5 @@ import auth from './auth/auth';
 
 export default {
   history,
-  auth
+  auth,
 };

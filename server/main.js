@@ -23,7 +23,7 @@ app.use(compression());
 if (env === 'development') {
   // Send an empty `main.css` in dev mode, since webpack dynamically injects
   // stylesheets. In production, this will be the generated CSS file.
-  app.get('/static/main.css', (req, res) => {res.type('css').send('')});
+  app.get('/static/main.css', (req, res) => {res.type('css').send('');});
   // Proxy static assets to the webpack-dev-server
   app.use('/static', proxy(url.parse(webpackConfig.output.publicPath)));
 } else {
@@ -31,7 +31,7 @@ if (env === 'development') {
   // non-development modes
   app.use('/static', express.static('./static', {
     // Tell user agents to cache resources for 60 days
-    maxAge: cacheDuration
+    maxAge: cacheDuration,
   }));
 }
 
@@ -60,7 +60,7 @@ if (env === 'development') {
   });
 
   // Start the webpack-dev-server
-  webpackDevServer.listen(webpackConfig.webpackDevServerPort, err => {
+  webpackDevServer.listen(webpackConfig.webpackDevServerPort, () => {
     console.log(`webpack-dev-server started...`);
   });
 }

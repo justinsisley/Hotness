@@ -12,7 +12,7 @@ const User = React.createClass({
 
   getInitialState() {
     return {
-      user: {}
+      user: {},
     };
   },
 

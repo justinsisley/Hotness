@@ -26,7 +26,7 @@ const authHelper = {
     });
 
     actions.loginActions.logOut();
-  }
+  },
 };
 
 export default authHelper;

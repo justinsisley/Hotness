@@ -10,8 +10,8 @@ const App = React.createClass({
 
   getInitialState() {
     return {
-      items: stores.navStore.appNavItems
-    }
+      items: stores.navStore.appNavItems,
+    };
   },
 
   render() {

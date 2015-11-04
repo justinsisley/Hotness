@@ -10,8 +10,8 @@ const Public = React.createClass({
 
   getInitialState() {
     return {
-      items: stores.navStore.publicNavItems
-    }
+      items: stores.navStore.publicNavItems,
+    };
   },
 
   render() {
