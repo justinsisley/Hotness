@@ -41,7 +41,7 @@
     "css-loader": "^0.22.0",
     "esdoc": "^0.4.3",
     "eslint": "^1.8.0",
-    "eslint-config-airbnb": "^0.1.0",
+    "eslint-config-airbnb": "^1.0.0",
     "eslint-plugin-react": "^3.7.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "nightwatch": "^0.8.6",
