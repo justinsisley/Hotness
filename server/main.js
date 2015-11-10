@@ -1,4 +1,6 @@
 import path from 'path';
+import log from 'loglevel';
+import {argv} from 'yargs';
 import express from 'express';
 import helmet from 'helmet';
 import compression from 'compression';
@@ -8,6 +10,9 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import serverConfig from '../config/server.config';
 import webpackConfig from '../config/webpack.config.dev';
+
+// Configure the log level
+log.setLevel(argv.logLevel || 'info');
 
 const env = process.env.NODE_ENV || 'development';
 const cacheDuration = 5184000000; // 60 days
@@ -39,7 +44,7 @@ if (env === 'development') {
 app.use('/api', proxy(url.parse(serverConfig.api)));
 
 // All other routes will be handed over to the client-side router
-app.get('/*', function(req, res) {
+app.get('/*', (req, res) => {
   // Non-development builds get a generated copy of the `index.html` file with
   // hashed, versioned assets filenames for cache busting.
   let index = '../static/index.html';
@@ -61,12 +66,12 @@ if (env === 'development') {
 
   // Start the webpack-dev-server
   webpackDevServer.listen(webpackConfig.webpackDevServerPort, () => {
-    console.log(`webpack-dev-server started...`);
+    log.info(`webpack-dev-server started...`);
   });
 }
 
 // Start the standard Express server
 app.listen(serverConfig.port, () => {
-  console.log(`Proxying API calls to ${serverConfig.api}`);
-  console.log(`Application running at http://localhost:${serverConfig.port}\n`);
+  log.info(`Proxying API calls to ${serverConfig.api}`);
+  log.info(`Application running at http://localhost:${serverConfig.port}\n`);
 });
