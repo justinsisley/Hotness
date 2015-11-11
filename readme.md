@@ -1,6 +1,6 @@
 # Hotness
 
-A clean and simple React and Flux boilerplate that uses:
+A clean React and Flux boilerplate that uses:
 - [React](https://facebook.github.io/react/) / [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html)
 - [React router](https://github.com/rackt/react-router)
 - [Flux](https://facebook.github.io/flux/)
