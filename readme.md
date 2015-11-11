@@ -1,20 +1,22 @@
 # Hotness
 
+A clean and simple React and Flux boilerplate that uses:
+- [React](https://facebook.github.io/react/) / [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html)
+- [React router](https://github.com/rackt/react-router)
+- [Flux](https://facebook.github.io/flux/)
+- [ES6](https://github.com/lukehoban/es6features)
+- [Webpack](https://webpack.github.io/) and [Babel](https://babeljs.io/)
+- [PostCSS](https://github.com/postcss/postcss)
+- [CSS modules](http://glenmaddern.com/articles/css-modules)
+- [ESLint](http://eslint.org/)
+- [Hot module reloading](http://gaearon.github.io/react-hot-loader/)
+- [Tape](https://github.com/substack/tape)
+- [Nightwatch](http://nightwatchjs.org/)
+- [ESDoc](https://esdoc.org/)
+
 ## Dependencies
 
->Homebrew (optional but recommended)
-
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
->Node.js and NPM
-
-```
-brew install node
-```
-
->Local dependencies
+Install local dependencies:
 
 ```
 npm install
@@ -22,7 +24,7 @@ npm install
 
 ## Development
 
-To run the application in development mode:
+Run the application in development mode:
 
 ```
 npm start
@@ -32,7 +34,7 @@ View the development application at [http://localhost:8743](http://localhost:874
 
 ## Production
 
-To run the application in production mode:
+Run the application in production mode:
 
 ```
 npm run production
