@@ -1,4 +1,7 @@
 # Hotness
+[![Build Status](https://travis-ci.org/justinsisley/Hotness.svg?branch=master)](https://travis-ci.org/justinsisley/Hotness)
+[![bitHound Score](https://www.bithound.io/github/justinsisley/Hotness/badges/score.svg)](https://www.bithound.io/github/justinsisley/Hotness)
+[![bitHound Dependencies](https://www.bithound.io/github/justinsisley/Hotness/badges/dependencies.svg)](https://www.bithound.io/github/justinsisley/Hotness/master/dependencies/npm)
 
 A clean React and Flux boilerplate that uses:
 - [React](https://facebook.github.io/react/) / [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html)
@@ -17,7 +20,7 @@ A clean React and Flux boilerplate that uses:
 
 ## Dependencies
 
-Install local dependencies:
+This application requires Node.js and NPM.
 
 ```
 npm install

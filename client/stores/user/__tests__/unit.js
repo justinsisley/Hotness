@@ -1,10 +1,10 @@
 import test from 'tape';
-import {userAction} from '../../../actions';
+import userAction from '../../../actions/user/user';
 import userStore from '../user';
 
 let originalGetUsers = userStore._getUsers;
 function mockGetUsers() {
-  userStore._getUsers = function() {
+  userStore._getUsers = () => {
     // TODO: user fixture data
     userStore._users = [{}, {}, {}, {}, {}];
     userStore.emitChange();
