@@ -1,4 +1,4 @@
 export default {
   port: 8743,
-  api: 'http://jsonplaceholder.typicode.com'
+  api: 'http://jsonplaceholder.typicode.com',
 };
