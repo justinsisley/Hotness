@@ -26,6 +26,12 @@ This application requires Node.js and NPM.
 npm install
 ```
 
+To perform a clean install, in which the project is returned to a pre-built state with fresh dependencies installed, run:
+
+```
+npm run clean
+```
+
 ## Development
 
 Run the application in development mode:
